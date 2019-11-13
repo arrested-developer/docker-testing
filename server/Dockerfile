@@ -20,4 +20,4 @@ RUN npm install
 COPY . /app/server/
 
 # Command to run them
-CMD ["nodemon", "index.js"]
+CMD ["nodemon", "app.js"]
