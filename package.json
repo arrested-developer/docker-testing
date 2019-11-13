@@ -1,0 +1,12 @@
+{
+  "name": "docker-testing",
+  "version": "1.0.0",
+  "description": "A demo of testing a full-stack monorepo project using Docker and Travis CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd server && docker-compose -f docker-compose.test.yml up --build --exit-code-from sut --abort-on-container-exit"
+  },
+  "repository": "git@github.com:arrested-developer/docker-testing.git",
+  "author": "Michael Watts <hello@michaelwatts.co>",
+  "license": "MIT"
+}
