@@ -1,2 +1,7 @@
 services:
   - docker
+install:
+  - docker --version
+  - docker-compose build
+test:
+  - yarn test
