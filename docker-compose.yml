@@ -15,12 +15,12 @@ services:
     # Environment variables
     environment:
       - MONGO_URI=mongodb://db:27017/db
+      - MONGO_URI_TEST=mongodb://db:27017/dbTest
       - PORT=4000
       - JWT_SECRET=secretsecret
       - JWT_EXPIRY=30d
       - DEBUG=worker:*
       - MORGAN=combined
-      - NODE_ENV=development
     # Port mapping
     # ports:
     #   - 4000:4000

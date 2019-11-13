@@ -11,13 +11,13 @@ RUN mkdir -p /app/server
 WORKDIR /app/server
 
 # Copy the dependency files over
-COPY package*.json /app/server/
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy the server files over
-COPY . /app/server/
+COPY . ./
 
 # Command to run them
 CMD ["nodemon", "app.js"]
