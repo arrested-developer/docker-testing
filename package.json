@@ -6,10 +6,19 @@
   "scripts": {
     "pretest": "docker-compose build",
     "test": "npm run test:client && npm run test:server",
-    "test:client": "docker-compose run client bash ./travis_tests.sh",
-    "test:server": "docker-compose run server bash ./travis_tests.sh"
+    "test:client": "docker-compose run -e COVERAGE_THRESHOLD=80 client bash ./travis_tests.sh",
+    "test:server": "docker-compose run -e COVERAGE_THRESHOLD=40 server bash ./travis_tests.sh"
   },
   "repository": "git@github.com:arrested-developer/docker-testing.git",
   "author": "Michael Watts <hello@michaelwatts.co>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^3.0.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  }
 }

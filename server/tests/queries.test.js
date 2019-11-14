@@ -1,8 +1,8 @@
 const test = require("tape");
-const { initDb, getDb, closeDb } = require("../src/database/dbConnection");
+const { initDb, closeDb } = require("../src/database/dbConnection");
 const {
   deleteAllTypes,
-  buildTestTypes,
+  buildTestTypes
 } = require("../src/database/dbTestBuild");
 const findAllCheeses = require("../src/database/queries/findAllCheeses");
 

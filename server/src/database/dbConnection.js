@@ -1,5 +1,4 @@
 require("dotenv").config();
-const url = require("url");
 const client = require("mongodb").MongoClient;
 
 // set the database url , including the database name, from the

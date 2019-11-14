@@ -17,6 +17,23 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": "${COVERAGE_THRESHOLD}",
+        "functions": "${COVERAGE_THRESHOLD}",
+        "lines": "${COVERAGE_THRESHOLD}",
+        "statements": "${COVERAGE_THRESHOLD}"
+      }
+    },
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/serviceWorker.js",
+      "!src/index.js",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
