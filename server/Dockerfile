@@ -4,7 +4,7 @@
 FROM node
 
 # Install nodemon for hot reloading
-RUN npm install -g nodemon
+# RUN npm install -g nodemon
 
 # Create and set the working directory
 RUN mkdir -p /app/server
@@ -17,7 +17,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the server files over
-COPY . ./
+COPY . .
 
 # Command to run them
 CMD ["nodemon", "app.js"]

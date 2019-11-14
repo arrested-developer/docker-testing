@@ -26,7 +26,9 @@ services:
     #   - 4000:4000
     # Volumes to mount
     volumes:
-      - ./server:/app/server
+      - ./server/src:/app/server/src
+      - ./server/public:/app/server/public
+      - ./server/tests/:/app/server/tests
     # Run command
     # Nodemon for hot reloading (-L flag required for polling in Docker)
     command: nodemon -L app.js
